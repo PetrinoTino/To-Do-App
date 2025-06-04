@@ -40,8 +40,7 @@ const TodoItem = (props) => {
         ref={inputRef}
         disabled={inputRef}
         defaultValue={item.item}
-        onKeyPress={(e) => update(item.id, inputRef.current.value, e)}
-      />
+        onKeyPress={(e) => update(item.id, inputRef.current.value, e)} />
       <div className="btns">
         <motion.button
           whileHover={{ scale: 1.4 }}
@@ -56,8 +55,7 @@ const TodoItem = (props) => {
             whileHover={{ scale: 1.4 }}
             whileTap={{ scale: 0.9 }}
             style={{ color: "green" }}
-            onClick={() => completeTodo(item.id)}
-          >
+            onClick={() => completeTodo(item.id)} >
             <IoCheckmarkDoneSharp />
           </motion.button>
         )}
@@ -65,8 +63,7 @@ const TodoItem = (props) => {
           whileHover={{ scale: 1.4 }}
           whileTap={{ scale: 0.9 }}
           style={{ color: "red" }}
-          onClick={() => removeTodo(item.id)}
-        >
+          onClick={() => removeTodo(item.id)}>
           {" "}
           <IoClose />
         </motion.button>{" "}
